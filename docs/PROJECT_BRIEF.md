@@ -1,6 +1,6 @@
 # Project Brief
 
-Status: Draft — product and security baseline not yet approved.
+Status: Draft — product and security baseline not yet approved. Initial prototype stack direction (Windows + Electron + WireGuard evaluation) is recorded in `adr/ADR-0001-windows-electron-wireguard.md`; it is not a production/security approval.
 Authority: Product direction and approved requirements only. Implemented behavior belongs in `SYSTEMDOC.md`; observed repository state belongs in `CURRENT_STATUS.md`.
 
 ## Purpose

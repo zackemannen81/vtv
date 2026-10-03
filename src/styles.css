@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #0b1020; color: #edf2ff; font-family: Inter, "Segoe UI", sans-serif; }
+.shell { width: min(100% - 48px, 400px); margin: 0 auto; padding: 48px 0 32px; }
+.brand { font-size: 30px; font-weight: 750; letter-spacing: -2px; }
+.brand-dot { color: #72e5c1; }
+.eyebrow { margin: 48px 0 10px; color: #8290ad; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+h1 { margin: 0 0 26px; font-size: 30px; letter-spacing: -1px; }
+.card { padding: 25px; border: 1px solid #222d45; border-radius: 17px; background: linear-gradient(145deg, #131c30, #101728); box-shadow: 0 20px 55px #05081166; }
+.status-row { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 650; }
+.dot { width: 11px; height: 11px; border-radius: 50%; background: #71809b; box-shadow: 0 0 0 5px #71809b1c; }
+.hint { margin: 14px 0 24px; color: #9aa8c1; font-size: 14px; }
+button { width: 100%; padding: 14px; border: 0; border-radius: 10px; background: #72e5c1; color: #0b1720; font: inherit; font-weight: 750; }
+button:disabled { cursor: not-allowed; opacity: .42; }
+.notice { margin: 18px 0 0; color: #d9ad70; font-size: 12px; line-height: 1.55; }
+footer { margin-top: 32px; color: #71809b; font-size: 12px; text-align: center; }

@@ -1,6 +1,6 @@
 # vtv Development Plan
 
-Status: Proposed; product/platform decisions remain open.
+Status: Initial prototype direction selected 2026-10-03 by operator: Windows + Electron, with the official WireGuard for Windows implementation evaluated as the free VPN engine. This is not approval of implementation, security behavior, or distribution. Product/security questions remain open; the UI prototype does not establish a VPN tunnel or protect traffic. See `adr/ADR-0001-windows-electron-wireguard.md` and `DEVELOPMENT_WORKSPACE.md`.
 
 ## Product intent
 

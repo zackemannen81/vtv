@@ -1,6 +1,6 @@
 # Current Task
 
-Task ID: VVTV-0001 (draft; claim on the default branch before Ready)
+Task ID: VVTV-0001 (Draft; claim on the default branch before Ready)
 Parent Task: None
 Status: Draft
 Owner: Rickard
@@ -10,43 +10,46 @@ Charter frozen at: Not frozen
 
 ## Task Summary
 
-The repository is an empty docs-first starter for vtv (Very thin VPN). Before implementation, establish a product brief and an evidence-based security baseline for a VPN client. Platform, protocol, deployment model, and user requirements are not yet known and must be confirmed rather than guessed.
+Establish the local workspace baseline and begin the operator-requested Windows Electron client scaffold, evaluating the official WireGuard for Windows implementation as the free VPN engine. This is a UI prototype only; no VPN behavior or protection claim is in scope.
 
 ## Task Charter
 
 ### Goal
 
-Agree on a bounded first-release target and the security, privacy, and operational requirements that implementation must satisfy.
+Prepare a runnable, conservative Windows desktop development scaffold, record the approved prototype stack direction, and leave tunnel/security-sensitive integration disabled pending requirements and design.
 
 ### Primary Deliverable
 
-An approved product/security baseline in `docs/PROJECT_BRIEF.md`, with consequential technology and trust-boundary choices recorded as ADRs.
+Root workspace conventions, `docs/DEVELOPMENT_WORKSPACE.md`, a reproducible Electron project with testable UI shell and Windows packaging configuration, plus an ADR documenting stack choice and limits.
 
 ### In Scope
 
-- Confirm target operating system(s), intended users, use cases, distribution model, and MVP UX.
-- Evaluate VPN protocol/service options and document the selected approach and rationale; do not invent a protocol or cryptography.
-- Define the threat model, trust boundaries, privacy/data-handling rules, and security requirements, including tunnel lifecycle, DNS/IP leak handling, credentials/key storage, updates, and failure behavior where applicable.
-- Identify platform-specific privileges, service/helper requirements, and constraints.
-- Record unknowns, rejected options, risks, and decisions with sources/evidence.
+- Record the operator's selection of Windows/Electron and a free VPN engine in the plan/ADR.
+- Set up Node/Electron local dependencies and lockfile; provide run, test, and Windows packaging scripts.
+- Create a minimal Swedish UI that clearly states no VPN tunnel is configured and keeps Connect disabled.
+- Use Electron context isolation, sandboxing, and disabled renderer Node integration; do not expose privileged operations or arbitrary commands.
+- Update observed status, system behavior, workspace docs, file index, and journal.
 
 ### Out of Scope
 
-- Implementing the client, server, tunnel, installer, or management backend.
-- Committing to a platform, protocol, provider, or privacy claim without operator approval and supporting evidence.
-- Designing custom cryptography or making unsupported anonymity/security guarantees.
+- WireGuard installation, profile provisioning, tunnel management, privileged automation, credentials, DNS/routing control, kill switch, or claims of VPN protection.
+- Final threat model, product/service model, public distribution, code signing, or production readiness.
+- Custom VPN protocols or cryptographic code.
 
 ### Definition of Done
 
-- The operator has approved the initial target users, platforms, use cases, and MVP boundary.
-- The selected protocol/deployment approach and major trust boundaries are documented with rationale and references, or explicitly left as blocking open decisions.
-- Security and privacy requirements are specific enough to become implementation and test criteria; unresolved risks have owners or follow-up tasks.
-- `PROJECT_BRIEF.md`, `SYSTEMDOC.md`, `CURRENT_STATUS.md`, and relevant ADR/backlog indexes agree and distinguish facts, decisions, and open questions.
-- The task identity is claimed in `TASK_IDS.md` on the default branch before the task transitions to Ready.
+- `npm ci`, `npm test`, and packaged Electron UI launch are verified on the current Windows workspace.
+- `npm run dist:win` produces a Windows NSIS installer; installer signature state and prototype-only limitations are documented.
+- Build and run commands and integration limitations are documented.
+- The UI does not present itself as protecting traffic; the connection action is disabled.
+- An ADR records Electron and official WireGuard Windows evaluation with explicit integration and security gates.
+- `git diff --check` and ignore-rule checks pass; task remains Draft because this branch is not the default branch.
 
 ### Minimum Verification Gates
 
-- [ ] Check every project/platform/protocol assertion against primary documentation or label it an assumption/open question.
-- [ ] Review the threat model for traffic, DNS, IPv4/IPv6, credentials, logs/telemetry, crash/failure states, and update trust.
-- [ ] Verify referenced docs and ADRs exist, indexes are current, and there are no contradictory decisions.
-- [ ] Obtain operator approval of the product boundary and security baseline before marking Ready or Complete.
+- [x] Inspect development plan, repo guidance, and existing task state.
+- [x] Verify Windows, Node/npm, Electron/WireGuard official sources and package availability.
+- [x] Install locked local dependencies and verify reproducible `npm ci` setup.
+- [x] Run automated tests and packaged Electron launch smoke test.
+- [x] Build Windows NSIS installer; verify artifact is unsigned and not release-ready.
+- [x] Update docs/status/index/journal and run whitespace/ignore-rule checks.
