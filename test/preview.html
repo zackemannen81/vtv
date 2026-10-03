@@ -3,37 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>vtv test preview</title>
+  <title>VTV — UI preview</title>
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; background: #0b1020; color: #edf2ff; font-family: Inter, "Segoe UI", sans-serif; }
-    .shell { width: min(100% - 48px, 400px); margin: 0 auto; padding: 48px 0 32px; }
-    .brand { font-size: 30px; font-weight: 750; letter-spacing: -2px; }
-    .brand-dot { color: #72e5c1; }
-    .eyebrow { margin: 48px 0 10px; color: #8290ad; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
-    h1 { margin: 0 0 26px; font-size: 30px; letter-spacing: -1px; }
-    .card { padding: 25px; border: 1px solid #222d45; border-radius: 17px; background: linear-gradient(145deg, #131c30, #101728); box-shadow: 0 20px 55px #05081166; }
-    .status-row { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 650; }
-    .dot { width: 11px; height: 11px; border-radius: 50%; background: #71809b; box-shadow: 0 0 0 5px #71809b1c; }
-    .hint { margin: 14px 0 24px; color: #9aa8c1; font-size: 14px; }
-    button { width: 100%; padding: 14px; border: 0; border-radius: 10px; background: #72e5c1; color: #0b1720; font: inherit; font-weight: 750; }
-    button:disabled { cursor: not-allowed; opacity: .42; }
-    .notice { margin: 18px 0 0; color: #d9ad70; font-size: 12px; line-height: 1.55; }
-    footer { margin-top: 32px; color: #71809b; font-size: 12px; text-align: center; }
+    html, body, iframe { width: 100%; height: 100%; margin: 0; border: 0; }
+    iframe { display: block; }
   </style>
 </head>
 <body>
-  <main class="shell">
-    <div class="brand">vtv<span class="brand-dot">.</span></div>
-    <p class="eyebrow">WINDOWS PROTOTYPE</p>
-    <h1>Din anslutning</h1>
-    <section class="card" aria-live="polite">
-      <div class="status-row"><span class="dot"></span><span>Frånkopplad</span></div>
-      <p class="hint">WireGuard-integrering är inte konfigurerad.</p>
-      <button disabled>Anslut</button>
-      <p class="notice">Den här prototypen skapar ingen VPN-tunnel och skyddar inte nätverkstrafik.</p>
-    </section>
-    <footer>En liten klient. Tydlig status.</footer>
-  </main>
+  <iframe src="../src/index.html" title="VTV UI preview"></iframe>
 </body>
 </html>

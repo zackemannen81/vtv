@@ -2,7 +2,7 @@
 
 ## Current state
 
-The repository has a Windows Electron UI scaffold, a committed npm lockfile, and security-focused renderer defaults. The screen explicitly states that no VPN tunnel is configured; Connect is disabled. The official WireGuard for Windows client/runtime is the selected engine candidate, but it is not automated, bundled, or invoked by this application. No service control, profile import, tunnel state, DNS/routing, credential storage, or protected-traffic behavior exists yet.
+The UI follows the layout and color direction of `docs/concepts_sandbox/mockup.html` and loads PNG artwork from `src/assets/`. This sandbox mockup is visual reference only, not product authority. Connect remains disabled; the app does not create a VPN tunnel or protect traffic. The official WireGuard for Windows client/runtime is the selected engine candidate, but it is not automated, bundled, or invoked by this application.
 
 The product/security decisions that remain open are recorded in `PROJECT_BRIEF.md`; the initial stack direction and limits are in `adr/ADR-0001-windows-electron-wireguard.md`. The development plan remains the milestone reference. This prototype selection does not settle user, service/provider, account/configuration flow, threat model, privacy requirements, or distribution/update model.
 

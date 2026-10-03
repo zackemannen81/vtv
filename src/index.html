@@ -3,23 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self';">
-  <title>vtv — Very thin VPN</title>
+  <meta name="theme-color" content="#09111f">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self';">
+  <title>VTV — Very Thin VPN</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="shell">
-    <div class="brand">vtv<span class="brand-dot">.</span></div>
-    <p class="eyebrow">WINDOWS PROTOTYPE</p>
-    <h1>Din anslutning</h1>
-    <section class="card" aria-live="polite">
-      <div class="status-row"><span id="status-dot" class="dot"></span><span id="status">Frånkopplad</span></div>
-      <p class="hint">WireGuard-integrering är inte konfigurerad.</p>
-      <button id="connect" disabled>Anslut</button>
-      <p class="notice">Den här prototypen skapar ingen VPN-tunnel och skyddar inte nätverkstrafik.</p>
-    </section>
+  <div class="app">
+    <header aria-label="VTV Very Thin VPN">
+      <img class="brand-icon" src="assets/vtv_icon.png" alt="">
+      <div>
+        <div class="brand-name">VTV</div>
+        <div class="brand-sub">VERY THIN VPN</div>
+      </div>
+    </header>
+    <main aria-labelledby="headline">
+      <div class="state" aria-live="polite"><span class="dot"></span><span>Frånkopplad</span></div>
+      <img class="art" src="assets/vtv_splash.png" alt="VTV:s enhörningssymbol i en sköld">
+      <h1 id="headline">Din anslutning, förenklad.</h1>
+      <p class="caption">WireGuard-integrering är inte konfigurerad.</p>
+      <button class="connect" type="button" disabled aria-describedby="notice">Anslut</button>
+      <p class="notice" id="notice"><span class="notice-icon" aria-hidden="true">ⓘ</span><span>Prototyp — ingen VPN-tunnel skapas och nätverkstrafik skyddas inte.</span></p>
+    </main>
     <footer>En liten klient. Tydlig status.</footer>
-  </main>
-  <script src="renderer.js"></script>
+  </div>
 </body>
 </html>

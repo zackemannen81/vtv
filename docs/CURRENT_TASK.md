@@ -16,7 +16,7 @@ Establish the local workspace baseline and begin the operator-requested Windows 
 
 ### Goal
 
-Prepare a runnable, conservative Windows desktop development scaffold, record the approved prototype stack direction, and leave tunnel/security-sensitive integration disabled pending requirements and design.
+Prepare a runnable, conservative Windows desktop development scaffold with a testable UI shell styled to the approved-for-this-mockup concept, while evaluating the official WireGuard for Windows implementation as the free VPN engine. This is a UI prototype only; no VPN behavior or protection claim is in scope.
 
 ### Primary Deliverable
 
@@ -53,3 +53,7 @@ Root workspace conventions, `docs/DEVELOPMENT_WORKSPACE.md`, a reproducible Elec
 - [x] Run automated tests and packaged Electron launch smoke test.
 - [x] Build Windows NSIS installer; verify artifact is unsigned and not release-ready.
 - [x] Update docs/status/index/journal and run whitespace/ignore-rule checks.
+- [x] Run `npm test` after the visual refresh; verify PNG use and disabled Connect behavior.
+- [x] Set up the repository baseline and prepare the Windows Electron UI shell with isolated/sandboxed renderer defaults.
+- [x] Restyle the UI to the sandbox mockup reference using local PNG splash artwork and app icon, keeping the Connect control disabled and the no-protection limitation clear.
+- [x] Record test results, current behavior, and the asset layout in relevant project docs.

@@ -4,11 +4,12 @@ const path = require('node:path');
 function createWindow() {
   const window = new BrowserWindow({
     width: 520,
-    height: 620,
+    height: 760,
     minWidth: 420,
-    minHeight: 500,
-    title: 'vtv — Very thin VPN',
-    backgroundColor: '#0b1020',
+    minHeight: 700,
+    title: 'VTV — Very Thin VPN',
+    icon: path.join(__dirname, 'assets', 'vtv_icon.png'),
+    backgroundColor: '#09111f',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,

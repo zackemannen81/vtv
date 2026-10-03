@@ -2,6 +2,13 @@
 
 Newest first. Append only.
 
+## 2026-10-03 — VTV mockup visual refresh
+
+- Updated the Electron UI to follow the visual layout and palette in the non-authoritative `docs/concepts_sandbox/mockup.html`, while preserving the disabled Connect button and explicit no-tunnel/no-protection warning.
+- Added the supplied splash and icon PNGs as local `src/assets/` resources; removed the UI's procedural/SVG artwork and configured the Electron window icon.
+- Consolidated the test preview to render the actual app UI and added coverage for the image assets and safe disabled state.
+- `npm test` passed (3 tests); `git diff --check` passed.
+
 ## 2026-10-03 — Windows Electron/WireGuard prototype scaffold
 
 - Operator selected Windows via Electron if feasible and authorized selection of a free VPN engine; recorded Electron and official WireGuard for Windows evaluation in ADR-0001.

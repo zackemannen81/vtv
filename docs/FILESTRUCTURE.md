@@ -15,4 +15,5 @@
 - `docs/JOURNAL.md` — append-only work history
 - `package.json` / `package-lock.json` — Electron scripts and locked dependencies
 - `src/` — Electron main/preload processes and UI scaffold
+- `src/assets/` — local PNG artwork used by the UI and application icon
 - `test/` — Node automated tests and visual preview

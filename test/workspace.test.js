@@ -10,6 +10,18 @@ test('Electron window uses isolated, sandboxed renderer with Node disabled', () 
   assert.match(main, /sandbox:\s*true/);
 });
 
+test('UI follows the mockup layout and uses the supplied PNG artwork', () => {
+  const html = fs.readFileSync(path.join(__dirname, '..', 'src', 'index.html'), 'utf8');
+  const assets = path.join(__dirname, '..', 'src', 'assets');
+  assert.match(html, /src="assets\/vtv_icon\.png"/);
+  assert.match(html, /src="assets\/vtv_splash\.png"/);
+  assert.doesNotMatch(html, /<svg\b/);
+  assert.equal(fs.existsSync(path.join(assets, 'vtv_icon.png')), true);
+  assert.equal(fs.existsSync(path.join(assets, 'vtv_splash.png')), true);
+  assert.match(html, /<button[^>]*disabled/);
+  assert.match(html, /skyddas inte/);
+});
+
 test('renderer exposes no connect action or Node capability', () => {
   const html = fs.readFileSync(path.join(__dirname, '..', 'src', 'index.html'), 'utf8');
   const preload = fs.readFileSync(path.join(__dirname, '..', 'src', 'preload.js'), 'utf8');

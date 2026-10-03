@@ -6,7 +6,7 @@ Reality as of 2026-10-03. This document records observed state, not intended or 
 
 - Git repository with the docs-first starter for vtv (Very thin VPN).
 - Root EditorConfig/ignore conventions and a Windows Electron UI scaffold with npm lockfile and security-focused renderer defaults.
-- The UI displays a disconnected state, keeps Connect disabled, and explicitly states that traffic is not protected. No VPN engine is installed, invoked, bundled, or integrated.
+- The Electron UI now follows the layout and color direction of `docs/concepts_sandbox/mockup.html` and uses local PNG art for the splash illustration and app icon. The Connect action remains disabled and no VPN engine is integrated.
 - Initial prototype direction (Windows + Electron + official WireGuard for Windows evaluation) is recorded in `adr/ADR-0001-windows-electron-wireguard.md`; product/security and distribution decisions remain open.
 - `npm ci` and `npm test` pass (2 tests); both the Electron app and packaged Windows app passed local launch smoke tests. `npm run dist:win` produced `release/vtv Setup 0.1.0.exe`; Authenticode status is NotSigned.
 - `VVTV-0001` remains Draft; its identity has not been claimed on the default branch.
